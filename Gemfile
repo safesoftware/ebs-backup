@@ -1,3 +1,3 @@
 source "https://rubygems.org"
 
-gem "aws-sdk", "~> 2.6"
+gem "aws-sdk-ec2", "~> 1.10"
