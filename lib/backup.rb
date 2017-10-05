@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 require "logger"
-require "aws-sdk"
+require "aws-sdk-ec2"
 
 LOGGER = Logger.new(STDOUT)
+# This ensures logs are visible through Docker logs (https://stackoverflow.com/a/42344140/8638384)
+$stdout.sync = true
 
 class EbsBackup
   BACKUP_ENABLED_TAG = "backup.enabled"
